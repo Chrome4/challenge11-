@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const uuid = require("./helpers/uuid");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
@@ -45,6 +45,4 @@ app.post("/notes", (req, res) => {
 
 app.delete("/api/notes/${id}", (req, res) => {});
 
-app.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT} 🚀`)
-);
+app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
